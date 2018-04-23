@@ -68,7 +68,10 @@ suites:
     run_list:
       - recipe[pam_fx::kitchen]
     attributes:
-      pam_fx: []
+      pam_fx:
+        name: 'pam-test'
+        lines:
+          - { mechanism: 'auth', flag: 'required', modul: 'pam_wheel.so', arguments: 'use_uid'}
     includes:
     - centos6
     - centos7
