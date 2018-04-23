@@ -13,11 +13,16 @@ resource_name :pam_fx
 provides :pam_fx, os: 'linux'
 
 # Defining properties
-property :lines, Array, required: true
+property :lines, Array,  required: true
 
 default_action :create
 
 action :create do
+  new_resource.lines.each do |line|
+    ['mechanism', 'flag', 'module'].each do |testarg|
+      raise "#{testarg} is missing in #{line}" unless line[testarg]
+    end
+  end
   template "/etc/pam.d/#{new_resource.name}" do
     source 'etc/pam.d/pam-file.erb'
     mode   '0644'

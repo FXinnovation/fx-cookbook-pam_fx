@@ -71,7 +71,8 @@ suites:
       pam_fx:
         name: 'pam-test'
         lines:
-          - { mechanism: 'auth', flag: 'required', modul: 'pam_wheel.so', arguments: 'use_uid'}
+          - { 'mechanism': 'auth', 'flag': 'required', 'module': 'pam_wheel.so', 'arguments': 'use_uid'}
+          - { 'mechanism': 'auth', 'flag': 'required', 'module': 'pam_wheel.so' }
     includes:
     - centos6
     - centos7
