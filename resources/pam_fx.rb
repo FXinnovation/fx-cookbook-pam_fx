@@ -31,5 +31,6 @@ action :create do
     variables(
       lines: new_resource.lines
     )
+    cookbook 'pam_fx'
   end
 end
