@@ -13,5 +13,3 @@ supports         'centos',  '>= 7.0'
 supports         'windows', '>= 6.1'
 supports         'ubuntu',  '>= 16.04'
 supports         'debian',  '>= 8.0'
-
-depends 'pam', '~> 1.1.0'
