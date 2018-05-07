@@ -16,13 +16,13 @@ N/A
 
 ## Resources
 ### pam_fx
-The pam_fx resoource is a resource that allows you to configure PAM.
+The pam_fx ressource is a resource that allows you to configure PAM.
 
 #### Properties
 
-| Name | Type | Required | Default | Platform Family | Description |
-| ---- | ---- | -------- | ------- | --------------- | ----------- |
-
+| Name  | Type  | Required | Default | Platform Family | Description |  
+| ----  | ----  | -------- | ------- | --------------- | ----------- |
+| lines | Array | true     | -       | linux           | { 'mechanism', 'flag', 'module' [, 'arguments'] } |
 
 ##### Notes
 
